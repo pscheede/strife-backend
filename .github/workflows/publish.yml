@@ -15,7 +15,7 @@ jobs:
           java-version: "21"
 
       - name: Build with Gradle
-        run: ./gradlew fatJar
+        run: ./gradlew --no-daemon buildFatJar
 
       - name: Upload build artifacts
         id: artifact-upload-step
