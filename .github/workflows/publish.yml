@@ -18,7 +18,11 @@ jobs:
         run: ./gradlew fatJar
 
       - name: Upload build artifacts
-        uses: actions/upload-artifact@v3
+        id: artifact-upload-step
+        uses: actions/upload-artifact@v4
         with:
           name: ktor-fat-jar
           path: build/libs/app.jar
+
+      - name: Output artifact ID
+        run: echo 'Artifact ID is ${{ steps.artifact-upload-step.outputs.artifact-id }}'
