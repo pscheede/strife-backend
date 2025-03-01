@@ -26,4 +26,4 @@ jobs:
 
       - name: Send GET request with artifact ID
         run: |
-          curl -X GET "http://infra.scheede.com/webhook/strife-backend/${{ steps.artifact-upload-step.outputs.artifact-id }}"
+          curl -X GET "https://infra.scheede.com/webhook/strife-backend/${{ steps.artifact-upload-step.outputs.artifact-id }}"
