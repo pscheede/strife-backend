@@ -2,6 +2,7 @@ package com.example
 
 import io.ktor.http.*
 import io.ktor.server.application.*
+import io.ktor.server.request.*
 import io.ktor.server.response.*
 import io.ktor.server.routing.*
 
@@ -19,7 +20,10 @@ fun Application.configureRouting() {
                 println("$headerName: $headerValue")
             }
 
-            call.respond(HttpStatusCode.NoContent)
+            val requestBody = call.receiveText()
+            println("Request Body: $requestBody")
+
+            call.respond(HttpStatusCode.OK)
         }
     }
 }
