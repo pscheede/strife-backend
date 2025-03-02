@@ -20,7 +20,7 @@ fun Application.configureRouting() {
                 println("$headerName: $headerValue")
             }
 
-            if (call.request.headers["X-Original-URI"]?.contains("stance-on-generative-ai") == true
+            if (call.request.headers["X-Original-URI"]?.contains("photo-shoot-luka-alien-stage") == true
             ) {
                 call.respond(HttpStatusCode.Unauthorized)
                 return@get
