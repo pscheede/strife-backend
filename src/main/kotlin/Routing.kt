@@ -20,8 +20,11 @@ fun Application.configureRouting() {
                 println("$headerName: $headerValue")
             }
 
-            val requestBody = call.receiveText()
-            println("Request Body: $requestBody")
+            if (call.request.headers["X-Original-URI"]?.contains("stance-on-generative-ai") == true
+            ) {
+                call.respond(HttpStatusCode.Unauthorized)
+                return@get
+            }
 
             call.respond(HttpStatusCode.OK)
         }
