@@ -1,5 +1,6 @@
-package com.example
+package com.scheede
 
+import com.scheede.auth.authRouting
 import io.ktor.server.application.*
 
 fun main(args: Array<String>) {
@@ -8,4 +9,5 @@ fun main(args: Array<String>) {
 
 fun Application.module() {
     configureRouting()
+    authRouting()
 }

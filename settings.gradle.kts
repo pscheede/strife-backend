@@ -1,1 +1,1 @@
-rootProject.name = "ktor-sample-app"
+rootProject.name = "strife-backend"
