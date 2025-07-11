@@ -7,7 +7,10 @@ import io.ktor.server.routing.*
 
 data class BlockedPage(val host: String, val path: String)
 
-val blockedPages = listOf(BlockedPage("beta.p-scheede.de", "/blog/photo-shoot-luka-alien-stage"))
+val blockedPages = listOf(
+    BlockedPage("beta.p-scheede.de", "/blog/photo-shoot-luka-alien-stage"),
+    BlockedPage("beta.p-scheede.de", "/blog/stance-on-generative-ai")
+)
 
 fun Application.authRouting() {
     routing {
