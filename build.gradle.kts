@@ -26,6 +26,11 @@ dependencies {
     implementation(libs.ktor.server.config.yaml)
     testImplementation(libs.ktor.server.test.host)
     testImplementation(libs.kotlin.test.junit)
+
+    implementation(libs.mongodb.driver.kotlin.coroutine)
+    implementation(libs.mongodb.bson.kotlinx)
+
+    implementation(libs.dotenv.kotlin)
 }
 
 ktor {
